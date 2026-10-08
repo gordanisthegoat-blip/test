@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="fsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#304938"/>
+      <stop offset="100%" stop-color="#14251c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#fsky)"/>
+  
+    <g opacity="0.92">
+        <rect x="170.6" y="613" width="12.8" height="41.6" fill="#14251c" />
+        <ellipse cx="177" cy="600.2" rx="48.0" ry="35.2" fill="#14251c" />
+        <ellipse cx="141.8" cy="613" rx="32.0" ry="25.6" fill="#14251c" />
+        <ellipse cx="212.2" cy="613" rx="32.0" ry="25.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="265.6" y="666" width="16.8" height="54.6" fill="#304938" />
+        <ellipse cx="274" cy="649.2" rx="63.0" ry="46.2" fill="#304938" />
+        <ellipse cx="227.8" cy="666" rx="42.0" ry="33.6" fill="#304938" />
+        <ellipse cx="320.2" cy="666" rx="42.0" ry="33.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="360.6" y="719" width="20.8" height="67.60000000000001" fill="#14251c" />
+        <ellipse cx="371" cy="698.2" rx="78.0" ry="57.2" fill="#14251c" />
+        <ellipse cx="313.8" cy="719" rx="52.0" ry="41.6" fill="#14251c" />
+        <ellipse cx="428.2" cy="719" rx="52.0" ry="41.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="463.6" y="772" width="8.8" height="28.6" fill="#304938" />
+        <ellipse cx="468" cy="763.2" rx="33.0" ry="24.200000000000003" fill="#304938" />
+        <ellipse cx="443.8" cy="772" rx="22.0" ry="17.6" fill="#304938" />
+        <ellipse cx="492.2" cy="772" rx="22.0" ry="17.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="558.6" y="565" width="12.8" height="41.6" fill="#14251c" />
+        <ellipse cx="565" cy="552.2" rx="48.0" ry="35.2" fill="#14251c" />
+        <ellipse cx="529.8" cy="565" rx="32.0" ry="25.6" fill="#14251c" />
+        <ellipse cx="600.2" cy="565" rx="32.0" ry="25.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="653.6" y="618" width="16.8" height="54.6" fill="#304938" />
+        <ellipse cx="662" cy="601.2" rx="63.0" ry="46.2" fill="#304938" />
+        <ellipse cx="615.8" cy="618" rx="42.0" ry="33.6" fill="#304938" />
+        <ellipse cx="708.2" cy="618" rx="42.0" ry="33.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="748.6" y="671" width="20.8" height="67.60000000000001" fill="#14251c" />
+        <ellipse cx="759" cy="650.2" rx="78.0" ry="57.2" fill="#14251c" />
+        <ellipse cx="701.8" cy="671" rx="52.0" ry="41.6" fill="#14251c" />
+        <ellipse cx="816.2" cy="671" rx="52.0" ry="41.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="851.6" y="724" width="8.8" height="28.6" fill="#304938" />
+        <ellipse cx="856" cy="715.2" rx="33.0" ry="24.200000000000003" fill="#304938" />
+        <ellipse cx="831.8" cy="724" rx="22.0" ry="17.6" fill="#304938" />
+        <ellipse cx="880.2" cy="724" rx="22.0" ry="17.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="946.6" y="777" width="12.8" height="41.6" fill="#14251c" />
+        <ellipse cx="953" cy="764.2" rx="48.0" ry="35.2" fill="#14251c" />
+        <ellipse cx="917.8" cy="777" rx="32.0" ry="25.6" fill="#14251c" />
+        <ellipse cx="988.2" cy="777" rx="32.0" ry="25.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="1041.6" y="570" width="16.8" height="54.6" fill="#304938" />
+        <ellipse cx="1050" cy="553.2" rx="63.0" ry="46.2" fill="#304938" />
+        <ellipse cx="1003.8" cy="570" rx="42.0" ry="33.6" fill="#304938" />
+        <ellipse cx="1096.2" cy="570" rx="42.0" ry="33.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="1136.6" y="623" width="20.8" height="67.60000000000001" fill="#14251c" />
+        <ellipse cx="1147" cy="602.2" rx="78.0" ry="57.2" fill="#14251c" />
+        <ellipse cx="1089.8" cy="623" rx="52.0" ry="41.6" fill="#14251c" />
+        <ellipse cx="1204.2" cy="623" rx="52.0" ry="41.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="1239.6" y="676" width="8.8" height="28.6" fill="#304938" />
+        <ellipse cx="1244" cy="667.2" rx="33.0" ry="24.200000000000003" fill="#304938" />
+        <ellipse cx="1219.8" cy="676" rx="22.0" ry="17.6" fill="#304938" />
+        <ellipse cx="1268.2" cy="676" rx="22.0" ry="17.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="1334.6" y="729" width="12.8" height="41.6" fill="#14251c" />
+        <ellipse cx="1341" cy="716.2" rx="48.0" ry="35.2" fill="#14251c" />
+        <ellipse cx="1305.8" cy="729" rx="32.0" ry="25.6" fill="#14251c" />
+        <ellipse cx="1376.2" cy="729" rx="32.0" ry="25.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="1429.6" y="782" width="16.8" height="54.6" fill="#304938" />
+        <ellipse cx="1438" cy="765.2" rx="63.0" ry="46.2" fill="#304938" />
+        <ellipse cx="1391.8" cy="782" rx="42.0" ry="33.6" fill="#304938" />
+        <ellipse cx="1484.2" cy="782" rx="42.0" ry="33.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="74.6" y="575" width="20.8" height="67.60000000000001" fill="#14251c" />
+        <ellipse cx="85" cy="554.2" rx="78.0" ry="57.2" fill="#14251c" />
+        <ellipse cx="27.799999999999997" cy="575" rx="52.0" ry="41.6" fill="#14251c" />
+        <ellipse cx="142.2" cy="575" rx="52.0" ry="41.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="177.6" y="628" width="8.8" height="28.6" fill="#304938" />
+        <ellipse cx="182" cy="619.2" rx="33.0" ry="24.200000000000003" fill="#304938" />
+        <ellipse cx="157.8" cy="628" rx="22.0" ry="17.6" fill="#304938" />
+        <ellipse cx="206.2" cy="628" rx="22.0" ry="17.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="272.6" y="681" width="12.8" height="41.6" fill="#14251c" />
+        <ellipse cx="279" cy="668.2" rx="48.0" ry="35.2" fill="#14251c" />
+        <ellipse cx="243.8" cy="681" rx="32.0" ry="25.6" fill="#14251c" />
+        <ellipse cx="314.2" cy="681" rx="32.0" ry="25.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="367.6" y="734" width="16.8" height="54.6" fill="#304938" />
+        <ellipse cx="376" cy="717.2" rx="63.0" ry="46.2" fill="#304938" />
+        <ellipse cx="329.8" cy="734" rx="42.0" ry="33.6" fill="#304938" />
+        <ellipse cx="422.2" cy="734" rx="42.0" ry="33.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="462.6" y="787" width="20.8" height="67.60000000000001" fill="#14251c" />
+        <ellipse cx="473" cy="766.2" rx="78.0" ry="57.2" fill="#14251c" />
+        <ellipse cx="415.8" cy="787" rx="52.0" ry="41.6" fill="#14251c" />
+        <ellipse cx="530.2" cy="787" rx="52.0" ry="41.6" fill="#14251c" />
+    </g>
+    <g opacity="0.92">
+        <rect x="565.6" y="580" width="8.8" height="28.6" fill="#304938" />
+        <ellipse cx="570" cy="571.2" rx="33.0" ry="24.200000000000003" fill="#304938" />
+        <ellipse cx="545.8" cy="580" rx="22.0" ry="17.6" fill="#304938" />
+        <ellipse cx="594.2" cy="580" rx="22.0" ry="17.6" fill="#304938" />
+    </g>
+    <g opacity="0.92">
+        <rect x="660.6" y="633" width="12.8" height="41.6" fill="#14251c" />
+        <ellipse cx="667" cy="620.2" rx="48.0" ry="35.2" fill="#14251c" />
+        <ellipse cx="631.8" cy="633" rx="32.0" ry="25.6" fill="#14251c" />
+        <ellipse cx="702.2" cy="633" rx="32.0" ry="25.6" fill="#14251c" />
+    </g>
+  <rect y="870" width="1600" height="130" fill="#14251c"/>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14251c"/>
+      <stop offset="60%" stop-color="#1e3428"/>
+      <stop offset="100%" stop-color="#304938"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1280" cy="190" r="70" fill="#dfc77e" opacity="0.9"/>
+  <circle cx="1280" cy="190" r="100" fill="#dfc77e" opacity="0.15"/>
+  <circle cx="137" cy="71" r="2.5" fill="#f7f3ec" opacity="0.35"/><circle cx="274" cy="142" r="3.5" fill="#f7f3ec" opacity="0.45"/><circle cx="411" cy="213" r="1.5" fill="#f7f3ec" opacity="0.55"/><circle cx="548" cy="284" r="2.5" fill="#f7f3ec" opacity="0.65"/><circle cx="685" cy="355" r="3.5" fill="#f7f3ec" opacity="0.25"/><circle cx="822" cy="46" r="1.5" fill="#f7f3ec" opacity="0.35"/><circle cx="959" cy="117" r="2.5" fill="#f7f3ec" opacity="0.45"/><circle cx="1096" cy="188" r="3.5" fill="#f7f3ec" opacity="0.55"/><circle cx="1233" cy="259" r="1.5" fill="#f7f3ec" opacity="0.65"/><circle cx="1370" cy="330" r="2.5" fill="#f7f3ec" opacity="0.25"/><circle cx="1507" cy="21" r="3.5" fill="#f7f3ec" opacity="0.35"/><circle cx="44" cy="92" r="1.5" fill="#f7f3ec" opacity="0.45"/><circle cx="181" cy="163" r="2.5" fill="#f7f3ec" opacity="0.55"/><circle cx="318" cy="234" r="3.5" fill="#f7f3ec" opacity="0.65"/><circle cx="455" cy="305" r="1.5" fill="#f7f3ec" opacity="0.25"/><circle cx="592" cy="376" r="2.5" fill="#f7f3ec" opacity="0.35"/><circle cx="729" cy="67" r="3.5" fill="#f7f3ec" opacity="0.45"/><circle cx="866" cy="138" r="1.5" fill="#f7f3ec" opacity="0.55"/><circle cx="1003" cy="209" r="2.5" fill="#f7f3ec" opacity="0.65"/><circle cx="1140" cy="280" r="3.5" fill="#f7f3ec" opacity="0.25"/><circle cx="1277" cy="351" r="1.5" fill="#f7f3ec" opacity="0.35"/><circle cx="1414" cy="42" r="2.5" fill="#f7f3ec" opacity="0.45"/><circle cx="1551" cy="113" r="3.5" fill="#f7f3ec" opacity="0.55"/><circle cx="88" cy="184" r="1.5" fill="#f7f3ec" opacity="0.65"/><circle cx="225" cy="255" r="2.5" fill="#f7f3ec" opacity="0.25"/><circle cx="362" cy="326" r="3.5" fill="#f7f3ec" opacity="0.35"/><circle cx="499" cy="17" r="1.5" fill="#f7f3ec" opacity="0.45"/><circle cx="636" cy="88" r="2.5" fill="#f7f3ec" opacity="0.55"/><circle cx="773" cy="159" r="3.5" fill="#f7f3ec" opacity="0.65"/><circle cx="910" cy="230" r="1.5" fill="#f7f3ec" opacity="0.25"/><circle cx="1047" cy="301" r="2.5" fill="#f7f3ec" opacity="0.35"/><circle cx="1184" cy="372" r="3.5" fill="#f7f3ec" opacity="0.45"/><circle cx="1321" cy="63" r="1.5" fill="#f7f3ec" opacity="0.55"/><circle cx="1458" cy="134" r="2.5" fill="#f7f3ec" opacity="0.65"/><circle cx="1595" cy="205" r="3.5" fill="#f7f3ec" opacity="0.25"/><circle cx="132" cy="276" r="1.5" fill="#f7f3ec" opacity="0.35"/><circle cx="269" cy="347" r="2.5" fill="#f7f3ec" opacity="0.45"/><circle cx="406" cy="38" r="3.5" fill="#f7f3ec" opacity="0.55"/><circle cx="543" cy="109" r="1.5" fill="#f7f3ec" opacity="0.65"/><circle cx="680" cy="180" r="2.5" fill="#f7f3ec" opacity="0.25"/><circle cx="817" cy="251" r="3.5" fill="#f7f3ec" opacity="0.35"/><circle cx="954" cy="322" r="1.5" fill="#f7f3ec" opacity="0.45"/><circle cx="1091" cy="13" r="2.5" fill="#f7f3ec" opacity="0.55"/><circle cx="1228" cy="84" r="3.5" fill="#f7f3ec" opacity="0.65"/><circle cx="1365" cy="155" r="1.5" fill="#f7f3ec" opacity="0.25"/><circle cx="1502" cy="226" r="2.5" fill="#f7f3ec" opacity="0.35"/><circle cx="39" cy="297" r="3.5" fill="#f7f3ec" opacity="0.45"/><circle cx="176" cy="368" r="1.5" fill="#f7f3ec" opacity="0.55"/><circle cx="313" cy="59" r="2.5" fill="#f7f3ec" opacity="0.65"/><circle cx="450" cy="130" r="3.5" fill="#f7f3ec" opacity="0.25"/><circle cx="587" cy="201" r="1.5" fill="#f7f3ec" opacity="0.35"/><circle cx="724" cy="272" r="2.5" fill="#f7f3ec" opacity="0.45"/><circle cx="861" cy="343" r="3.5" fill="#f7f3ec" opacity="0.55"/><circle cx="998" cy="34" r="1.5" fill="#f7f3ec" opacity="0.65"/>
+  <polygon points="0,680 120,607 257,519 355,637 505,574 665,581 779,520 938,519 1078,602 1197,602 1353,541 1444,624 1554,630 1682,633 1600,680 1600,1000 0,1000" fill="#304938" />
+  <polygon points="0,760 131,682 271,708 370,696 506,706 660,666 754,698 899,613 997,659 1098,612 1195,689 1313,705 1453,708 1571,709 1678,646 1600,760 1600,1000 0,1000" fill="#1e3428" />
+  
+    <g opacity="1">
+        <rect x="222.4" y="770" width="15.2" height="49.4" fill="#304938" />
+        <ellipse cx="230" cy="754.8" rx="57.0" ry="41.8" fill="#304938" />
+        <ellipse cx="188.2" cy="770" rx="38.0" ry="30.4" fill="#304938" />
+        <ellipse cx="271.8" cy="770" rx="38.0" ry="30.4" fill="#304938" />
+    </g>
+  
+    <g opacity="1">
+        <rect x="419.6" y="810" width="20.8" height="67.60000000000001" fill="#14251c" />
+        <ellipse cx="430" cy="789.2" rx="78.0" ry="57.2" fill="#14251c" />
+        <ellipse cx="372.8" cy="810" rx="52.0" ry="41.6" fill="#14251c" />
+        <ellipse cx="487.2" cy="810" rx="52.0" ry="41.6" fill="#14251c" />
+    </g>
+  
+    <g opacity="1">
+        <rect x="990.8" y="800" width="18.4" height="59.8" fill="#304938" />
+        <ellipse cx="1000" cy="781.6" rx="69.0" ry="50.599999999999994" fill="#304938" />
+        <ellipse cx="949.4" cy="800" rx="46.0" ry="36.8" fill="#304938" />
+        <ellipse cx="1050.6" cy="800" rx="46.0" ry="36.8" fill="#304938" />
+    </g>
+  
+    <g opacity="1">
+        <rect x="1248.0" y="830" width="24.0" height="78.0" fill="#14251c" />
+        <ellipse cx="1260" cy="806.0" rx="90.0" ry="66.0" fill="#14251c" />
+        <ellipse cx="1194.0" cy="830" rx="60.0" ry="48.0" fill="#14251c" />
+        <ellipse cx="1326.0" cy="830" rx="60.0" ry="48.0" fill="#14251c" />
+    </g>
+  
+    <g opacity="1">
+        <rect x="1473.2" y="780" width="13.6" height="44.199999999999996" fill="#304938" />
+        <ellipse cx="1480" cy="766.4" rx="51.0" ry="37.4" fill="#304938" />
+        <ellipse cx="1442.6" cy="780" rx="34.0" ry="27.2" fill="#304938" />
+        <ellipse cx="1517.4" cy="780" rx="34.0" ry="27.2" fill="#304938" />
+    </g>
+  <rect y="800" width="1600" height="200" fill="#14251c"/>
+</svg>
