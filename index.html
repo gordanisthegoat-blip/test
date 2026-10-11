@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوم‌گردی سرای ستاره | دورود، لرستان</title>
     <meta name="description" content="بوم‌گردی سرای ستاره در روستای دره‌اسپر دورود، میان کوه و جنگل بلوط. سوئیت و اتاق‌های همکف، غذای محلی و راهنمای مسیرهای طبیعت‌گردی.">
+    <link rel="canonical" href="https://YOUR-DOMAIN.ir/index.html">
 
     <meta name="theme-color" content="#24402f">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2324402f'/%3E%3Cpath fill='%23d9bb8b' d='M12 3.5l2.2 5.3 5.8.5-4.4 3.8 1.3 5.6L12 15.6 7.1 18.7l1.3-5.6L4 9.3l5.8-.5z'/%3E%3C/svg%3E">
@@ -14,10 +15,9 @@
     <meta property="og:title" content="بوم‌گردی سرای ستاره | دورود، لرستان">
     <meta property="og:description" content="بوم‌گردی سرای ستاره در روستای دره‌اسپر دورود، میان کوه و جنگل بلوط. سوئیت و اتاق‌های همکف، غذای محلی و راهنمای مسیرهای طبیعت‌گردی.">
     <meta property="og:image" content="images/hero.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preload" href="vendor/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="vendor/fonts/fonts.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,6 +32,7 @@
     }
     </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="around.css">
 </head>
 
 <body>
@@ -61,22 +62,14 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="active" aria-current="page"><i class="bi bi-house-door-fill nl-ico" style="--ic:#1f9d8f"></i>خانه</a>
-                <a href="about.html"><i class="bi bi-info-circle-fill nl-ico" style="--ic:#d99a1c"></i>درباره ما</a>
-                <a href="rooms.html"><i class="bi bi-house-heart-fill nl-ico" style="--ic:#e2674f"></i>اقامت</a>
-                <a href="facilities.html"><i class="bi bi-house-gear-fill nl-ico" style="--ic:#3f9b4f"></i>امکانات</a>
-                <a href="experience.html"><i class="bi bi-tree-fill nl-ico" style="--ic:#7c5cc4"></i>تجربه</a>
                 <a href="restaurant.html"><i class="bi bi-cup-hot-fill nl-ico" style="--ic:#d99a1c"></i>رستوران و کافه</a>
-                <a href="gallery.html"><i class="bi bi-images nl-ico" style="--ic:#3b87d6"></i>گالری و نظرات</a>
                 <a href="around.html"><i class="bi bi-geo-alt-fill nl-ico" style="--ic:#1f9d8f"></i>اطراف</a>
                 <a class="nl-book" href="booking.html"><i class="bi bi-calendar2-check-fill nl-ico" style="--ic:#e2674f"></i>رزرو</a>
             </div>
 
-            <a href="tel:+989161234567" class="nav-phone" aria-label="تماس تلفنی"><i class="bi bi-telephone-fill"></i></a>
+            <a href="tel:+989337057904" class="nav-phone" aria-label="تماس تلفنی"><i class="bi bi-telephone-fill"></i></a>
             <a href="booking.html#booking-form" class="nav-cta">رزرو اقامت <i class="bi bi-arrow-left"></i></a>
 
-            <button class="menu-toggle" type="button" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="navLinks">
-                <span></span><span></span><span></span>
-            </button>
         </nav>
     </div>
 </header>
@@ -166,7 +159,7 @@
             <a class="tile t-book reveal" href="booking.html#booking-form">
                 <span class="tile-ico c-white"><i class="bi bi-calendar2-check-fill"></i></span>
                 <h3>رزرو اقامت</h3>
-                <p>ماه و روز را انتخاب کن و درخواستت را در واتساپ بفرست.</p>
+                <p>ماه و روز را انتخاب کن و درخواستت را در تلگرام بفرست.</p>
                 <span class="tile-pill">شروع رزرو <i class="bi bi-arrow-left"></i></span>
             </a>
 
@@ -179,10 +172,10 @@
 
             <div class="bento-pair">
             <!-- گالری -->
-            <a class="tile t-gallery reveal" href="gallery.html">
-                <span class="tile-ico c-white"><i class="bi bi-images"></i></span>
-                <h3>گالری و نظرات</h3>
-                <p>تصاویر و تجربه‌ی مهمان‌ها</p>
+            <a class="tile t-gallery reveal" href="tour.html">
+                <span class="tile-ico c-white"><i class="bi bi-compass-fill"></i></span>
+                <h3>تور مجازی</h3>
+                <p>اتاق‌ها و رستوران را ببینید</p>
                 <span class="tile-go"><i class="bi bi-arrow-left"></i></span>
             </a>
             <!-- تجربه -->
@@ -248,7 +241,7 @@
             <div class="rest-teaser-stats">
                 <div><strong>۴</strong><span>وعده در روز</span></div>
                 <div><strong>۱۰۰٪</strong><span>محلی و تازه</span></div>
-                <div><strong>۲۴/۷</strong><span>سفارش در واتساپ</span></div>
+                <div><strong>۲۴/۷</strong><span>سفارش در تلگرام</span></div>
             </div>
         </div>
     </div>
@@ -290,6 +283,29 @@
     </div>
 </section>
 
+<!-- MAP + FIND US -->
+<section class="section home-map" id="map-home">
+    <div class="container">
+        <div class="section-head">
+            <div><span class="label">موقعیت</span><h2 class="section-title has-ico"><span class="title-ico ti-teal" aria-hidden="true"><i class="bi bi-map-fill"></i></span><span>سرای ستاره روی نقشه</span></h2></div>
+            <p class="section-lead">نزدیک‌ترین جاهای دیدنی دور تا دور سرای ستاره؛ روی هر نشانگر بزن تا فاصله و راهنمایش را ببینی.</p>
+        </div>
+        <div class="pl-map-card"><div id="aroundMap" role="region" aria-label="نقشه سرای ستاره و نزدیک‌ترین مقصدها"></div></div>
+        <div class="find-us">
+            <a class="find-btn find-neshan" href="https://nshn.ir/?lat=33.383&amp;lng=49.117" target="_blank" rel="noopener">
+                <span class="find-ico"><i class="bi bi-geo-alt-fill"></i></span>
+                <span class="find-txt"><strong>پیدا کردن در نشان</strong><small>باز کردن موقعیت در اپ یا وب نشان</small></span>
+                <i class="bi bi-box-arrow-up-left find-go"></i>
+            </a>
+            <a class="find-btn find-balad" href="https://balad.ir/location?latitude=33.383&amp;longitude=49.117" target="_blank" rel="noopener">
+                <span class="find-ico"><i class="bi bi-compass-fill"></i></span>
+                <span class="find-txt"><strong>پیدا کردن در بلد</strong><small>باز کردن موقعیت در اپ یا وب بلد</small></span>
+                <i class="bi bi-box-arrow-up-left find-go"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- NEARBY PLACES -->
 <section class="section home-places tint-sky">
     <div class="container">
@@ -298,32 +314,32 @@
             <p class="section-lead">از سرای ستاره تا لاله‌زار، دریاچه و آبشار فقط یک رانندگی کوتاه است.</p>
         </div>
         <div class="hscroll">
-                <a class="place-card" href="around.html">
+                <a class="place-card" href="around-rosestan-tulip-plain.html">
                     <span class="tile-ico c-coral"><i class="bi bi-flower1"></i></span>
                     <strong>دشت لاله‌های واژگون رزستان</strong>
                     <span class="place-km"><b>۷٫۶</b> کیلومتر</span>
                 </a>
-                <a class="place-card" href="around.html">
+                <a class="place-card" href="around-gahar-lake.html">
                     <span class="tile-ico c-teal"><i class="bi bi-water"></i></span>
                     <strong>دریاچه گهر</strong>
                     <span class="place-km"><b>۲۴٫۹</b> کیلومتر</span>
                 </a>
-                <a class="place-card" href="around.html">
+                <a class="place-card" href="around-garmeh-waterfall.html">
                     <span class="tile-ico c-sky"><i class="bi bi-droplet-fill"></i></span>
                     <strong>آبشار گرمه</strong>
                     <span class="place-km"><b>۳۳٫۵</b> کیلومتر</span>
                 </a>
-                <a class="place-card" href="around.html">
+                <a class="place-card" href="around-qarun-mountain.html">
                     <span class="tile-ico c-gold"><i class="bi bi-triangle-fill"></i></span>
                     <strong>کوه قارون</strong>
                     <span class="place-km"><b>۳۶٫۷</b> کیلومتر</span>
                 </a>
-                <a class="place-card" href="around.html">
+                <a class="place-card" href="around-sefidkooh.html">
                     <span class="tile-ico c-leaf"><i class="bi bi-snow2"></i></span>
                     <strong>سفیدکوه کوچک</strong>
                     <span class="place-km"><b>۵۱٫۶</b> کیلومتر</span>
                 </a>
-                <a class="place-card" href="around.html">
+                <a class="place-card" href="around-aligoodarz.html">
                     <span class="tile-ico c-purple"><i class="bi bi-signpost-split-fill"></i></span>
                     <strong>الیگودرز</strong>
                     <span class="place-km"><b>۷۷٫۹</b> کیلومتر</span>
@@ -357,7 +373,7 @@
                     <div class="tcard-author"><span class="tcard-avatar">ع.ا</span><div><strong>علی احمدی</strong><small>خرم‌آباد</small></div></div>
                 </article>
         </div>
-        <div class="teaser-foot"><a href="gallery.html" class="btn btn-outline">گالری و نظرات بیشتر</a></div>
+        <div class="teaser-foot"><a href="experience.html#testimonials" class="btn btn-outline">نظرات بیشتر مهمانان</a></div>
     </div>
 </section>
 
@@ -370,7 +386,7 @@
         </div>
         <div class="faq">
                 <details class="faq-item"><summary>ساعت ورود و تخلیه چه زمانی است؟</summary><p>ورود از ساعت ۱۲:۰۰ و تخلیه تا ساعت ۱۰:۰۰ است.</p></details>
-                <details class="faq-item"><summary>رزرو چطور انجام می‌شود؟</summary><p>ماه و روز ورود و خروج را انتخاب می‌کنی و درخواستت با همه‌ی جزئیات در واتساپ برای میزبان فرستاده می‌شود. رزرو تا تأیید میزبان قطعی نیست.</p></details>
+                <details class="faq-item"><summary>رزرو چطور انجام می‌شود؟</summary><p>ماه و روز ورود و خروج را انتخاب می‌کنی و درخواستت با همه‌ی جزئیات در تلگرام برای میزبان فرستاده می‌شود. رزرو تا تأیید میزبان قطعی نیست.</p></details>
                 <details class="faq-item"><summary>قوانین لغو رزرو چیست؟</summary><p>تا ۷۲ ساعت قبل ۱۰٪ جریمه، تا ۴۸ ساعت قبل ۳۰٪ و تا ۲۴ ساعت قبل ۴۰٪. کمتر از ۲۴ ساعت یا در ایام پیک بازپرداخت ندارد.</p></details>
                 <details class="faq-item"><summary>اقامت کودکان چگونه است؟</summary><p>اقامت کودکان زیر ۵ سال رایگان است.</p></details>
                 <details class="faq-item"><summary>غذای محلی دارید؟</summary><p>بله، غذای محلی و سنتی با هماهنگی قبلی تهیه می‌شود. هنگام رزرو تیک «غذای محلی» را بزن.</p></details>
@@ -423,12 +439,7 @@
             <div>
                 <span class="footer-col-title">دسترسی سریع</span>
                 <nav class="footer-links-list">
-                    <a href="about.html">درباره ما</a>
-                    <a href="rooms.html">اقامت</a>
-                    <a href="facilities.html">امکانات</a>
-                    <a href="experience.html">تجربه</a>
                     <a href="restaurant.html">رستوران و کافه</a>
-                    <a href="gallery.html">گالری و نظرات</a>
                     <a href="around.html">اطراف</a>
                     <a href="booking.html">رزرو</a>
                 </nav>
@@ -443,10 +454,12 @@
 </footer>
 
 <div class="mobile-bar" role="group" aria-label="تماس سریع">
-    <a href="tel:+989161234567" class="mb-call"><i class="bi bi-telephone-fill"></i> تماس</a>
-    <a href="https://wa.me/989161234567" target="_blank" rel="noopener" class="mb-wa"><i class="bi bi-whatsapp"></i> واتساپ</a>
+    <a href="tel:+989337057904" class="mb-call"><i class="bi bi-telephone-fill"></i> تماس</a>
+    <a href="https://t.me/+989337057904" target="_blank" rel="noopener" class="mb-wa"><i class="bi bi-telegram"></i> تلگرام</a>
 </div>
 
+<script>window.PLACES=[{"id": "rosestan", "file": "around-rosestan-tulip-plain.html", "name": "دشت لاله‌های واژگون رزستان", "dist": "۷٫۶ کیلومتر", "icon": "bi-flower1", "c": "#d4568a", "lat": 33.425, "lng": 49.05}, {"id": "gahar", "file": "around-gahar-lake.html", "name": "دریاچه گهر", "dist": "۲۴٫۹ کیلومتر", "icon": "bi-water", "c": "#3b87d6", "lat": 33.3075, "lng": 49.2817}, {"id": "garmeh", "file": "around-garmeh-waterfall.html", "name": "آبشار گرمه", "dist": "۳۳٫۵ کیلومتر", "icon": "bi-droplet-fill", "c": "#1f9d8f", "lat": 33.29, "lng": 48.98}, {"id": "qarun", "file": "around-qarun-mountain.html", "name": "کوه قارون", "dist": "۳۶٫۷ کیلومتر", "icon": "bi-triangle-fill", "c": "#d99a1c", "lat": 33.22, "lng": 49.2}, {"id": "sefidkooh", "file": "around-sefidkooh.html", "name": "سفیدکوه کوچک", "dist": "۵۱٫۶ کیلومتر", "icon": "bi-snow2", "c": "#7c5cc4", "lat": 33.5, "lng": 48.78}, {"id": "aligoodarz", "file": "around-aligoodarz.html", "name": "الیگودرز", "dist": "۷۷٫۹ کیلومتر", "icon": "bi-shop", "c": "#3f9b4f", "lat": 33.4, "lng": 49.69}];window.HOME={lat:33.383,lng:49.117};</script>
+<script src="around.js" defer></script>
 <script src="script.js" defer></script>
 
 </body>

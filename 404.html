@@ -15,10 +15,9 @@
     <meta property="og:title" content="صفحه پیدا نشد | بوم‌گردی سرای ستاره">
     <meta property="og:description" content="صفحه مورد نظر یافت نشد.">
     <meta property="og:image" content="images/hero.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preload" href="vendor/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="vendor/fonts/fonts.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -49,22 +48,14 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="index.html"><i class="bi bi-house-door-fill nl-ico" style="--ic:#1f9d8f"></i>خانه</a>
-                <a href="about.html"><i class="bi bi-info-circle-fill nl-ico" style="--ic:#d99a1c"></i>درباره ما</a>
-                <a href="rooms.html"><i class="bi bi-house-heart-fill nl-ico" style="--ic:#e2674f"></i>اقامت</a>
-                <a href="facilities.html"><i class="bi bi-house-gear-fill nl-ico" style="--ic:#3f9b4f"></i>امکانات</a>
-                <a href="experience.html"><i class="bi bi-tree-fill nl-ico" style="--ic:#7c5cc4"></i>تجربه</a>
                 <a href="restaurant.html"><i class="bi bi-cup-hot-fill nl-ico" style="--ic:#d99a1c"></i>رستوران و کافه</a>
-                <a href="gallery.html"><i class="bi bi-images nl-ico" style="--ic:#3b87d6"></i>گالری و نظرات</a>
                 <a href="around.html"><i class="bi bi-geo-alt-fill nl-ico" style="--ic:#1f9d8f"></i>اطراف</a>
                 <a class="nl-book" href="booking.html"><i class="bi bi-calendar2-check-fill nl-ico" style="--ic:#e2674f"></i>رزرو</a>
             </div>
 
-            <a href="tel:+989161234567" class="nav-phone" aria-label="تماس تلفنی"><i class="bi bi-telephone-fill"></i></a>
+            <a href="tel:+989337057904" class="nav-phone" aria-label="تماس تلفنی"><i class="bi bi-telephone-fill"></i></a>
             <a href="booking.html#booking-form" class="nav-cta">رزرو اقامت <i class="bi bi-arrow-left"></i></a>
 
-            <button class="menu-toggle" type="button" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="navLinks">
-                <span></span><span></span><span></span>
-            </button>
         </nav>
     </div>
 </header>
@@ -99,10 +90,16 @@
                     <i class="bi bi-house-door-fill"></i>
                     بازگشت به خانه
                 </a>
-                <a href="restaurant.html" class="btn btn-outline">
-                    رستوران و کافه
+                <a href="booking.html" class="btn btn-outline">
+                    رزرو اقامت
                 </a>
             </div>
+
+            <nav style="display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:18px; font-size:.88rem;">
+                <a href="about.html" class="link">درباره ما</a>
+                <a href="rooms.html" class="link">اقامت</a>
+                <a href="booking.html" class="link">اطراف و نقشه</a>
+            </nav>
 
         </div>
     </div>
@@ -135,12 +132,7 @@
             <div>
                 <span class="footer-col-title">دسترسی سریع</span>
                 <nav class="footer-links-list">
-                    <a href="about.html">درباره ما</a>
-                    <a href="rooms.html">اقامت</a>
-                    <a href="facilities.html">امکانات</a>
-                    <a href="experience.html">تجربه</a>
                     <a href="restaurant.html">رستوران و کافه</a>
-                    <a href="gallery.html">گالری و نظرات</a>
                     <a href="around.html">اطراف</a>
                     <a href="booking.html">رزرو</a>
                 </nav>
@@ -155,8 +147,8 @@
 </footer>
 
 <div class="mobile-bar" role="group" aria-label="تماس سریع">
-    <a href="tel:+989161234567" class="mb-call"><i class="bi bi-telephone-fill"></i> تماس</a>
-    <a href="https://wa.me/989161234567" target="_blank" rel="noopener" class="mb-wa"><i class="bi bi-whatsapp"></i> واتساپ</a>
+    <a href="tel:+989337057904" class="mb-call"><i class="bi bi-telephone-fill"></i> تماس</a>
+    <a href="https://t.me/+989337057904" target="_blank" rel="noopener" class="mb-wa"><i class="bi bi-telegram"></i> تلگرام</a>
 </div>
 
 <script src="script.js" defer></script>

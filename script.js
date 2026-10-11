@@ -40,7 +40,7 @@ function renderShamsiDate() {
 }
 
 /* --- shared helpers --- */
-const WHATSAPP_NUMBER = "989161234567"; // TODO: replace with the real number
+const TELEGRAM_LINK = "https://t.me/+989337057904";
 const FA_MONTHS = ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"];
 const toFaDigits = (n) => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
 function parseISO(v) { const [y, m, d] = v.split("-").map(Number); return new Date(y, m - 1, d); }
@@ -51,8 +51,8 @@ function shamsiLabel(d) {
 }
 
 
-/* --- Shamsi day/month picker: two small boxes (ماه ، روز), limited to one month ahead --- */
-const BOOK_WINDOW_DAYS = 30;
+/* --- Shamsi day/month picker: two small boxes (ماه ، روز), no booking-window limit --- */
+const BOOK_WINDOW_DAYS = 730; // بدون محدودیت یک‌ماهه
 const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
 function createDatePicker(root, hidden) {
     const label = root.dataset.label || "";
@@ -115,27 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderShamsiDate();
 
-    /* --- MOBILE MENU --- */
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    if (toggle && navLinks) {
-        toggle.addEventListener("click", () => {
-            const open = navLinks.classList.toggle("open");
-            toggle.classList.toggle("open", open);
-            toggle.setAttribute("aria-expanded", String(open));
-            document.body.classList.toggle("nav-open", open);
-        });
-        navLinks.querySelectorAll("a").forEach(a => {
-            a.addEventListener("click", () => {
-                navLinks.classList.remove("open");
-                toggle.classList.remove("open");
-                toggle.setAttribute("aria-expanded", "false");
-                document.body.classList.remove("nav-open");
-            });
-        });
-    }
-
     /* --- HEADER ON SCROLL --- */
     const header = document.querySelector(".site-header");
     const onScroll = () => header && header.classList.toggle("scrolled", window.scrollY > 40);
@@ -167,16 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         revealEls.forEach(el => el.classList.add("visible"));
     }
-
-    /* --- ESC KEY --- */
-    document.addEventListener("keydown", e => {
-        if (e.key === "Escape") {
-            navLinks && navLinks.classList.remove("open");
-            toggle && toggle.classList.remove("open");
-            toggle && toggle.setAttribute("aria-expanded", "false");
-            document.body.classList.remove("nav-open");
-        }
-    });
 
     /* --- TESTIMONIAL SLIDER --- */
     const track = document.querySelector(".ttrack");
@@ -267,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
         inPick.setRange(today, addDays(today, BOOK_WINDOW_DAYS));
         outPick.setRange(addDays(today, 1), maxDate);
         const hintEl = $("bkDateHint");
-        if (hintEl) hintEl.textContent = `رزرو فقط تا یک ماه آینده (تا ${shamsiLabel(addDays(today, BOOK_WINDOW_DAYS))}) امکان‌پذیر است.`;
+        if (hintEl) hintEl.textContent = "";
 
         inEl.addEventListener("change", () => {
             if (inEl.value) {
@@ -336,6 +305,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (parseISO(inEl.value) < today) return say("تاریخ ورود نمی‌تواند در گذشته باشد.", true);
             const n = nights();
             if (n <= 0) return say("تاریخ خروج باید بعد از تاریخ ورود باشد.", true);
+            const agreeEl = $("bkAgree");
+            if (agreeEl && !agreeEl.checked) { agreeEl.focus(); return say("برای ارسال درخواست، ابتدا تیک «قوانین را خواندم» را بزنید.", true); }
 
             const units = Number(unitsEl.value), price = Number(roomOpt().dataset.price);
             const lines = [
@@ -350,8 +321,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 `هزینهٔ تخمینی: ${fmt(n * units * price)} تومان`,
                 "لطفاً موجودی و مبلغ نهایی را اعلام کنید."
             ].filter(Boolean);
-            say("در حال باز کردن واتساپ… اگر باز نشد از دکمهٔ «گفتگو در واتساپ» پایین صفحه استفاده کنید.", false);
-            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+            /* تلگرام متن آماده را از لینک مستقیم نمی‌پذیرد؛ پس متن کپی می‌شود و چت باز می‌شود */
+            const msg = lines.join("\n");
+            let copied = false;
+            try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(msg); copied = true; } } catch (_) {}
+            if (!copied) {
+                try {
+                    const ta = document.createElement("textarea");
+                    ta.value = msg; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;opacity:0;top:0;left:0";
+                    document.body.appendChild(ta); ta.select(); copied = document.execCommand("copy"); ta.remove();
+                } catch (_) {}
+            }
+            say(copied
+                ? "تلگرام با متن آمادهٔ درخواست باز می‌شود؛ فقط دکمهٔ ارسال را بزنید. (اگر متن خالی بود، Paste کنید.) اگر باز نشد از دکمهٔ «گفتگو در تلگرام» پایین صفحه استفاده کنید."
+                : "در حال باز کردن تلگرام… اگر باز نشد از دکمهٔ «گفتگو در تلگرام» پایین صفحه استفاده کنید.", false);
+            window.open(TELEGRAM_LINK + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
         });
     }
 
@@ -558,20 +542,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* =====================================================
    SMART DOCK
-   4 slots: [خانه | واتساپ در صفحه اصلی] [کمکی] [اقدام اصلی] [بیشتر]
+   4 slots: [خانه | تلگرام در صفحه اصلی] [کمکی] [اقدام اصلی] [بیشتر]
    کمکی و اقدام اصلی با صفحه (و با اسکرول / مرحله فرم) عوض می‌شوند.
 ===================================================== */
 function initMobileNavigation() {
     if (document.querySelector('.mobile-dock')) return;
 
-    const PHONE = '+989161234567', WA = 'https://wa.me/989161234567';
+    const PHONE = '+989337057904', WA = 'https://t.me/+989337057904';
     const svg = d => '<svg viewBox="0 0 24 24" aria-hidden="true">' + d + '</svg>';
     const icons = {
         home: svg('<path d="M3 10.8 12 3l9 7.8"/><path d="M5.5 9.8V21h13V9.8"/><path d="M9.5 21v-6h5v6"/>'),
         booking: svg('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="m9 15.5 2 2 4-4"/>'),
         more: svg('<rect x="4" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8"/>'),
         call: svg('<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>'),
-        wa: svg('<path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 9.2c.4 2 2.4 4 4.4 4.4l1.2-1.2-2-1-.8.8c-.8-.4-1.5-1.1-1.9-1.9l.8-.8-1-2L9 9.2z"/>'),
+        wa: svg('<path d="M21 3 3 10.5l6 2.5 2.5 6L21 3z"/><path d="m9 13 5-4"/>'),
         route: svg('<path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.2"/>'),
         rules: svg('<path d="M12 21s7-4.5 7-11V5l-7-2-7 2v5c0 6.5 7 11 7 11Z"/><path d="m9 12 2 2 4-4"/>'),
         season: svg('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
@@ -590,11 +574,6 @@ function initMobileNavigation() {
     const star = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 L14.9 8.6 L22.5 9.3 L16.8 14.3 L18.5 21.8 L12 17.8 L5.5 21.8 L7.2 14.3 L1.5 9.3 L9.1 8.6 Z"/></svg>';
 
     const morePages = [
-        ['rooms.html', 'اقامت', 'rooms'],
-        ['gallery.html', 'گالری و نظرات', 'gallery'],
-        ['about.html', 'درباره ما', 'about'],
-        ['facilities.html', 'امکانات', 'facilities'],
-        ['experience.html', 'تجربه و فصل‌ها', 'experience'],
         ['restaurant.html', 'رستوران و کافه', 'restaurant'],
         ['around.html', 'اطراف و مسیر', 'around']
     ];
@@ -619,7 +598,7 @@ function initMobileNavigation() {
     const PAGES = {
         'index.html':      { href: 'index.html',      label: 'خانه',    icon: icons.home,       color: '#1f9d8f' },
         'rooms.html':      { href: 'rooms.html',      label: 'اقامت',   icon: icons.rooms,      color: '#e2674f' },
-        'gallery.html':    { href: 'gallery.html',    label: 'گالری',   icon: icons.gallery,    color: '#3b87d6' },
+        'tour.html':    { href: 'tour.html',    label: 'تور مجازی',   icon: icons.gallery,    color: '#3b87d6' },
         'about.html':      { href: 'about.html',      label: 'درباره',  icon: icons.about,      color: '#d99a1c' },
         'facilities.html': { href: 'facilities.html', label: 'امکانات', icon: icons.facilities, color: '#3f9b4f' },
         'experience.html': { href: 'experience.html', label: 'تجربه',   icon: icons.experience, color: '#7c5cc4' },
@@ -628,7 +607,7 @@ function initMobileNavigation() {
         'booking.html':    { href: 'booking.html#booking-form', label: 'رزرو', icon: icons.booking, color: '#e2674f' }
     };
     const callItem = { label: 'تماس', href: 'tel:' + PHONE, icon: icons.call, color: '#3f9b4f' };
-    const waItem   = { label: 'واتساپ', href: WA, blank: true, icon: icons.wa, color: '#1f9a55' };
+    const waItem   = { label: 'تلگرام', href: WA, blank: true, icon: icons.wa, color: '#229ed9' };
     const jump = (id, openAcc) => e => {
         const t = document.getElementById(id);
         if (!t) return;
@@ -641,7 +620,7 @@ function initMobileNavigation() {
     const auxFor = {
         'index.html': { label: 'رستوران', href: 'restaurant.html', icon: icons.restaurant, color: '#d99a1c' },
         'rooms.html': callItem,
-        'gallery.html': waItem,
+        'tour.html': waItem,
         'about.html': callItem,
         'facilities.html': { label: 'قوانین', href: '#rules', icon: icons.rules, color: '#e2674f', onClick: jump('rules', true) },
         'experience.html': { label: 'فصل‌ها', href: '#seasons', icon: icons.season, color: '#d99a1c', onClick: jump('seasons') },
@@ -709,7 +688,7 @@ function initMobileNavigation() {
             const stepsOn = form.classList.contains('steps-on');
             const step = Number(form.dataset.step || 1);
             if (!stepsOn || step === 3) {
-                setAux({ label: 'ارسال', icon: icons.send, color: '#1f9a55',
+                setAux({ label: 'ارسال', icon: icons.send, color: '#229ed9',
                     onClick: () => form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event('submit', { cancelable: true })) });
             } else {
                 setAux({ label: 'بعدی', icon: icons.next, color: '#24402f', onClick: () => next && next.click() });
@@ -740,10 +719,10 @@ function initMobileNavigation() {
         <div class="mobile-more-grid"></div>
         <div class="mobile-more-contact">
             <a class="mc-call" href="tel:${PHONE}"><i class="bi bi-telephone-fill"></i> تماس</a>
-            <a class="mc-wa" href="${WA}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> واتساپ</a>
+            <a class="mc-wa" href="${WA}" target="_blank" rel="noopener"><i class="bi bi-telegram"></i> تلگرام</a>
         </div>`;
     const grid = sheet.querySelector('.mobile-more-grid');
-    const sheetPages = [['index.html', 'صفحه اصلی', 'home'], ['booking.html', 'رزرو', 'booking'], ...morePages];
+    const sheetPages = [['index.html', 'صفحه اصلی', 'home'], ['booking.html', 'رزرو اقامت', 'booking'], ...morePages];
     sheetPages.forEach(([href, label, icon]) => {
         const a = document.createElement('a');
         a.href = href;
@@ -770,3 +749,43 @@ function initMobileNavigation() {
 }
 
 document.addEventListener('DOMContentLoaded', initMobileNavigation);
+
+
+/* =====================================================
+   NAV BUBBLE (desktop) — one white pill marks the current page (does not follow the mouse). Replaces per-link underlines.
+===================================================== */
+function initNavBubble() {
+    const nav = document.querySelector('.site-header .nav-links');
+    if (!nav || nav.querySelector('.nav-bubble')) return;
+
+    const bubble = document.createElement('span');
+    bubble.className = 'nav-bubble';
+    bubble.setAttribute('aria-hidden', 'true');
+    nav.prepend(bubble);
+    nav.classList.add('has-bubble');
+
+    const links = Array.from(nav.querySelectorAll('a:not(.nl-book)'));
+    const rest = () => nav.querySelector('a.active:not(.nl-book)') ||
+        links.find(a => a.getAttribute('aria-current') === 'page') || null;
+    let under = null;
+
+    const moveTo = (a, instant) => {
+        links.forEach(l => l.classList.toggle('is-under', l === a));
+        under = a;
+        if (!a || !a.offsetWidth) { nav.classList.remove('bubble-on'); return; }
+        if (instant) bubble.style.transition = 'none';
+        bubble.style.width = a.offsetWidth + 'px';
+        bubble.style.height = a.offsetHeight + 'px';
+        bubble.style.transform = 'translate(' + a.offsetLeft + 'px,' + a.offsetTop + 'px)';
+        nav.classList.add('bubble-on');
+        if (instant) { void bubble.offsetWidth; bubble.style.transition = ''; }
+    };
+
+    /* the pill stays under the current page; hover is plain CSS (no gliding) */
+    const settle = () => moveTo(rest(), true);
+    window.addEventListener('resize', settle);
+    window.addEventListener('load', settle);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle);
+    settle();
+}
+document.addEventListener('DOMContentLoaded', initNavBubble);
